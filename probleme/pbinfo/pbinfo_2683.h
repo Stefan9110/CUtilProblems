@@ -29,4 +29,4 @@ void solve() {
     std::cout << findMinPartition(readArray < int > (length), length);
 }
 
-#endif //PROBLBAC_PBINFO_2683_H
+#endif

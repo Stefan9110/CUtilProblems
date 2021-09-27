@@ -20,4 +20,11 @@ T *readArray(size_t &length, std::ifstream &in) {
     return result;
 }
 
+template<class T>
+T *emptyArray(size_t length) {
+    T *result = new T[length];
+    for (int i = 0; i < length; i++) result[i] = 0;
+    return result;
+}
+
 #endif //PROBLBAC_ARRAYS_H
