@@ -9,18 +9,21 @@
 #include <cmath>
 #include "utils/Arrays.h"
 
-long long findMax(const int *positive, const int *negative, int positiveIteration, int negativeIteration) {
-    long long positiveProd = -2147483648, negativeProd = -2147483648;
-    for (int i = 0; i < positiveIteration; i++) {
-        if (i == 0) positiveProd = positive[0];
-        else positiveProd *= positive[i];
-    }
-    for (int i = 0; i < negativeIteration; i++) {
-        if (i == 0) negativeProd = negative[0];
-        else negativeProd *= negative[i];
-    }
+long long calculateProd(const int *arr, short length) {
+    long long result = -2147483648;
+    for (int i = 0; i < length; i++) result = (i == 0 ? arr[0] : result * arr[i]);
+    return result;
+}
 
-    return std::max(positiveProd, negativeProd);
+long long findMax(const int *positive, const int *negative, short positive_length, short negative_length) {
+    return std::max(calculateProd(positive, positive_length), calculateProd(negative, negative_length));
+}
+
+int *getMax2(const int *arr, const size_t arr_length, short &length, bool positive) {
+    int *result = new int[2];
+    length = 0;
+    for (int i = 0; i < arr_length && length < 2; i++) if (positive == arr[i] >= 0) result[length++] = arr[i];
+    return result;
 }
 
 void solve() {
@@ -34,17 +37,9 @@ void solve() {
               }
     );
 
-    auto *positive = new int[2], *negative = new int[2];
-    int positiveIteration = 0, negativeIteration = 0;
-
-    for (int i = 0; i < length; i++) {
-        if (arr[i] >= 0) {
-            if (positiveIteration < 2) positive[positiveIteration++] = arr[i];
-        } else if (negativeIteration < 2) negative[negativeIteration++] = arr[i];
-        if (positiveIteration == 2 && negativeIteration == 2) break;
-    }
-
-    std::cout << findMax(positive, negative, positiveIteration, negativeIteration);
+    short pos_length, neg_length;
+    auto *pos_arr = getMax2(arr, length, pos_length, true), *neg_arr = getMax2(arr, length, neg_length, false);
+    std::cout << findMax(pos_arr, neg_arr, pos_length, neg_length);
 }
 
 #endif
