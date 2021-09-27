@@ -19,7 +19,7 @@ public:
      * Requires value found in the node with data type E
      * @param value - initialized value in node
      */
-    List(E value) {
+    explicit List(E value) {
         this->value_ = value;
     }
 
@@ -104,9 +104,7 @@ public:
      * @return pointer to node containing the given element. If not found, returns nullptr
      */
     List *find(E element) {
-        for (auto it = this; it != nullptr; it = it->next_ptr()) {
-            if (it->value() == element) return it;
-        }
+        for (auto it = this; it != nullptr; it = it->next_ptr()) if (it->value() == element) return it;
         return nullptr;
     }
 
@@ -146,4 +144,4 @@ public:
     }
 };
 
-#endif //PROBLBAC_LIST_H
+#endif
