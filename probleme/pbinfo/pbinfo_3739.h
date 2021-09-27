@@ -91,7 +91,7 @@ unsigned long findRequiredMoney(Seller *seller_array,
 
 void solve() {
     // Initialize problem data
-    setInputFolder(R"(C:\Users\danie\CUtilProblems\input-files\)");
+    setInputFolder(R"(C:\Users\danie\CUtilProblems\input-files\pbinfo_3739\)"); // Remove this line when uploading to pbinfo
     initialiseFiles(FILE_NAME);
     auto requiredQuantity = readFromFile<unsigned long>(),
             maxMoney = readFromFile<unsigned long>();
@@ -114,4 +114,5 @@ void solve() {
     writeToFile(findRequiredMoney(sellerArray, sellersLength, requiredQuantity, maxMoney));
     closeFiles();
 }
+
 #endif
