@@ -2,8 +2,8 @@
  * https://www.pbinfo.ro/probleme/2683/easy-ssc
  * O(n) req
  */
-#ifndef PROBLBAC_6_H
-#define PROBLBAC_6_H
+#ifndef PROBLBAC_PBINFO_2683_H
+#define PROBLBAC_PBINFO_2683_H
 
 #include <iostream>
 #include "utils/List.h"
@@ -24,9 +24,9 @@ unsigned int findMinPartition(const int *arr, size_t length) {
     return previous->length();
 }
 
-void solve_6() {
+void solve() {
     size_t length = 0;
     std::cout << findMinPartition(readArray < int > (length), length);
 }
 
-#endif //PROBLBAC_6_H
+#endif //PROBLBAC_PBINFO_2683_H

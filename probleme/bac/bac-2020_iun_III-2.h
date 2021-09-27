@@ -1,8 +1,5 @@
-/**
- *
- */
-#ifndef PROBLBAC_5_H
-#define PROBLBAC_5_H
+#ifndef PROBLBAC_BAC_2020_IUN_III_2_H
+#define PROBLBAC_BAC_2020_IUN_III_2_H
 
 #include <iostream>
 #include <cstring>
@@ -17,13 +14,13 @@ bool reverse(char *str) {
     return false;
 }
 
-void solve_5() {
+void solve() {
     std::string result;
     char *str = new char[2048];
     std::cin.get(str, 2048);
 
     bool modified = false;
-    for (char *it = strtok(str, " "); it != nullptr; it = strtok(nullptr, " ")) {
+    for (char *it = strtok_s(str, " "); it != nullptr; it = strtok_s(nullptr, " ")) {
         if (reverse(it)) modified = true;
         result = result.append(it).append(" ");
     }

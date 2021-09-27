@@ -3,8 +3,10 @@
  * III.1
  */
 
-#ifndef PROBLBAC_4_H
-#define PROBLBAC_4_H
+#ifndef PROBLBAC_BAC_2020_IUN_III_1_H
+#define PROBLBAC_BAC_2020_IUN_III_1_H
+
+#include <iostream>
 
 bool isValid(int number) {
     int sum = 1 + (number == 1 ? 0 : number);
@@ -17,7 +19,7 @@ int findKValid(int start, int end, int k) {
     return -1;
 }
 
-void solve_4() {
+void solve() {
     int start, end, k;
     std::cin >> start >> end >> k;
     std::cout << findKValid(start, end, k);

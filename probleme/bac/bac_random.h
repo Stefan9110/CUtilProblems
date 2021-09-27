@@ -1,9 +1,5 @@
-//
-// Created by Stefan Halasz on 27.09.2021.
-//
-
-#ifndef PROBLBAC_1_H
-#define PROBLBAC_1_H
+#ifndef PROBLBAC_BAC_RANDOM_H
+#define PROBLBAC_BAC_RANDOM_H
 
 #include <iostream>
 const std::string vowels = "aeiou";
@@ -64,4 +60,4 @@ void imog(int num1, int num2, bool &rez) {
     rez = stripFromEven(num1, false) == stripFromEven(num2, true);
 }
 
-#endif //PROBLBAC_1_H
+#endif //PROBLBAC_BAC_RANDOM_H

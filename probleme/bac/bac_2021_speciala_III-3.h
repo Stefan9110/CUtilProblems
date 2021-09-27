@@ -1,12 +1,13 @@
-#ifndef PROBLBAC_3_H
-#define PROBLBAC_3_H
+#ifndef PROBLBAC_BAC_2021_SPECIALA_III_3_H
+#define PROBLBAC_BAC_2021_SPECIALA_III_3_H
 
 /**
  * https://www.pbinfo.ro/resurse/9dc152/examene/2021/ses_speciala/E_d_Informatica_2021_sp_MI_C_var_07.pdf
  * III.3
  */
+#include <iostream>
 
-void solve_3() {
+void solve() {
     int firstIntegers[2];
     std::cin >> firstIntegers[0] >> firstIntegers[1];
 

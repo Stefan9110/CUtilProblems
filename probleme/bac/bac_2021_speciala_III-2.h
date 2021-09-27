@@ -1,5 +1,5 @@
-#ifndef PROBLBAC_2_H
-#define PROBLBAC_2_H
+#ifndef PROBLBAC_BAC_2021_SPECIALA_III_2_H
+#define PROBLBAC_BAC_2021_SPECIALA_III_2_H
 /**
  * https://www.pbinfo.ro/resurse/9dc152/examene/2021/ses_speciala/E_d_Informatica_2021_sp_MI_C_var_07.pdf
  * III.2
@@ -25,7 +25,7 @@ void print(int **matrix, const unsigned int length) {
     }
 }
 
-void solve_2() {
+void solve() {
     unsigned int length;
     std::cin >> length;
     int **matrix = readArray(length);
