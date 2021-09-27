@@ -13,8 +13,22 @@ T *readArray(size_t &length) {
 }
 
 template<class T>
+T *readArrayOfSize(size_t length) {
+    T *result = new T[length];
+    for (int i = 0; i < length; i++) std::cin >> result[i];
+    return result;
+}
+
+template<class T>
 T *readArray(size_t &length, std::ifstream &in) {
     in >> length;
+    T *result = new T[length];
+    for (int i = 0; i < length; i++) in >> result[i];
+    return result;
+}
+
+template<class T>
+T *readArrayOfSize(size_t length, std::ifstream &in) {
     T *result = new T[length];
     for (int i = 0; i < length; i++) in >> result[i];
     return result;
