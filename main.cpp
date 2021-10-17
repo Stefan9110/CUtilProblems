@@ -1,4 +1,4 @@
-#include "probleme/others/greedy/greedy_11.h"
+#include "probleme/others/greedy/greedy_10.h"
 
 int main() {
     solve();
