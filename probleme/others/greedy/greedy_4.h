@@ -11,7 +11,7 @@ void solve() {
     initialiseFiles(FILE_NAME);
 
     auto max_length = readFromFile<size_t>();
-    bool *used = emptyArray<bool>(max_length + 1);
+    auto *used = emptyArray<bool>(max_length + 1);
 
     while (!isFileEmpty()) used[readFromFile<int>()] = true;
 
