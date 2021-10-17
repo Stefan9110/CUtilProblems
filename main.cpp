@@ -1,4 +1,4 @@
-#include "probleme/pbinfo/pbinfo_91.h"
+#include "probleme/others/greedy/greedy_4.h"
 
 int main() {
     solve();

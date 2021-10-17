@@ -34,7 +34,7 @@ public:
     }
 
     /**
-     * @return The amount of coffee in stock
+     * @return The amount of coffee a stock
      */
     unsigned long selling_quantity() const {
         return this->selling_quantity_;
@@ -57,7 +57,7 @@ public:
     }
 
     unsigned long priceOf(unsigned long maxMoney, unsigned long &maxQuantity) const {
-        // If the seller does not have the amount we need in stock just buy the entire stock
+        // If the seller does not have the amount we need a stock just buy the entire stock
         unsigned long purchasedQuantity = (maxQuantity > selling_quantity()) ? selling_quantity() : maxQuantity,
                 totalPrice = priceOf(purchasedQuantity); // Calculate payment to seller
 

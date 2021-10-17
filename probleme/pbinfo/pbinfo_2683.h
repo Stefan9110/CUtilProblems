@@ -26,7 +26,7 @@ unsigned int findMinPartition(const int *arr, size_t length) {
 
 void solve() {
     size_t length = 0;
-    std::cout << findMinPartition(readArray < int > (length), length);
+    std::cout << findMinPartition(readArray<int>(length), length);
 }
 
 #endif

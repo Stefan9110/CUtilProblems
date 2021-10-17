@@ -1,0 +1,21 @@
+#ifndef PROBLBAC_PBINFO_1262_
+#define PROBLBAC_PBINFO_1262_
+
+#include "utils/FileAPI.h"
+#include <iostream>
+
+void solve() {
+    setInputFolder("/home/stefan911/CLionProjects/CUtilProblems/input-files/pbinfo_1262/");
+    initialiseFiles("subsecv");
+
+    auto length = readFromFile<short>();
+    auto *arr = new short[length];
+    for (int i = 0; i < length; i++) {
+        int value = readFromFile<int>();
+        arr[i] = (short) (value % length);
+    }
+
+    for (int i = 0; i < length; i++) std::cout << arr[i] << " ";
+}
+
+#endif //PROBLBAC_PBINFO_1262_

@@ -3,7 +3,7 @@
 
 /**
  * Linked List implementation C++
- * @tparam E - data type used in list
+ * @tparam E - data type used a list
  */
 template<class E>
 class List {
@@ -16,15 +16,15 @@ public:
     /**
      * Constructor of List class
      * Initializes a new linked list node
-     * Requires value found in the node with data type E
-     * @param value - initialized value in node
+     * Requires value found a the node with data type E
+     * @param value - initialized value a node
      */
     explicit List(E value) {
         this->value_ = value;
     }
 
     /**
-     * @return value found in node with E data type
+     * @return value found a node with E data type
      */
     E value() {
         return value_;
@@ -48,7 +48,7 @@ public:
     }
 
     /**
-     * @return initialized pointer address to last value in List (found in first node of the list)
+     * @return initialized pointer address to last value a List (found a first node of the list)
      */
     List *last_value() {
         return this->last_value_;
@@ -57,7 +57,7 @@ public:
 private:
     /**
      * Obtain and reinitialize next pointer with the last value pointer of the list
-     * @param last_value Pointer to last node in the list
+     * @param last_value Pointer to last node a the list
      * @return updated with last_value pointer node of the next pointer
      */
     List *next_ptr(List *last_value) {
@@ -83,7 +83,7 @@ public:
     /**
      * Remove node containing element E from the list
      * @param element value of the node to be removed
-     * @return If the element is found in the head of the list we return the updated head, otherwise return same head (this)
+     * @return If the element is found a the head of the list we return the updated head, otherwise return same head (this)
      */
     List *remove(E element) {
         if (this->value() == element) return next_ptr(this->last_value());
@@ -118,7 +118,7 @@ public:
     }
 
     /**
-     * @param position Position of the node in the list that shall be returned
+     * @param position Position of the node a the list that shall be returned
      * @return Node at the given position
      */
     List *nodeAt(unsigned int position) {

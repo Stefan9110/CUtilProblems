@@ -59,4 +59,8 @@ void writeToFile(char *arr) {
     file_out << arr;
 }
 
+bool isFileEmpty() {
+    return file_in.eof();
+}
+
 #endif
