@@ -1,7 +1,3 @@
-//
-// Created by dmihn on 10/17/2021.
-//
-
 #ifndef PROBLBAC_GREEDY_10_H
 #define PROBLBAC_GREEDY_10_H
 
@@ -35,5 +31,4 @@ void solve() {
     }
 }
 
-
-#endif //PROBLBAC_GREEDY_10_H
+#endif
